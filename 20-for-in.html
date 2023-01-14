@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+        // Iterasi semua data
+        const person = {
+            nama_depan : 'Muhammad',
+            nama_belakang : 'Iqbal',
+        }
+
+        for(const property in person){
+            document.writeln(`<p>${property} : ${person[property]}</p>`)
+        }
+    </script>
+  </body>
+</html>

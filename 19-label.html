@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        loop_i:
+        for (let i = 0; i < 10; i++) {
+            loop_j:
+            for (let j = 0; j < 100; j++) {
+                document.writeln(`<p>${i} - ${j}</p>`)    
+                continue loop_i            
+            }
+            
+        }
+    </script>
+</body>
+</html>
