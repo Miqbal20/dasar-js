@@ -8,7 +8,7 @@
   </head>
   <body>
     <script>
-        // Iterasi semua data
+        // Iterasi semua data pada object
         const person = {
             nama_depan : 'Muhammad',
             nama_belakang : 'Iqbal',
@@ -16,6 +16,13 @@
 
         for(const property in person){
             document.writeln(`<p>${property} : ${person[property]}</p>`)
+        }
+
+        // iterasi semua data pada list
+        const days = ["senin","selasa","rabu","kamis","jumat","sabtu","minggu"]
+
+        for (const day in days) {
+            document.writeln(`<p>index ${day} : ${days[day]}</p>`)
         }
     </script>
   </body>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        fitur untuk mengirim data sebanyak banyaknya
+
+        hanya boleh diletakan diparameter paling akhir
+
+        menambahkan karakter titik tiga kali ...
+        */
+
+        function sum(...data){
+            let total = 0
+            
+            for (const iterator of data) {
+                total += iterator
+            }
+
+            return total
+        }
+
+        let result = sum(1,2,3,4)
+        document.writeln(result)
+
+
+        // Spread syntax : merubah array menjadi rest parameter
+
+        function multiple(...data){
+            let total = 0
+
+            for (const iterator of data) {
+                total = iterator * iterator 
+                
+            }
+            document.writeln(total)
+        }
+
+        multiple(1,2,3,4,5)
+
+        // versi lama arguments, tidak fleksibel dan sulit menambahkan parameter lain
+
+        function oldSum(){
+            let total = 0
+            for (const iterator of arguments) {
+                total += iterator
+            }
+            document.writeln(total)
+        }
+
+        oldSum(1,2,3,4,5,6)
+
+    </script>
+</body>
+</html>

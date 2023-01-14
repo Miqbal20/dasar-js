@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // semua parameter defaultnya bersifat optional, boleh diisi boleh tidak
+        function space(){
+            document.writeln(`<br/>`)
+        }
+
+        function names(nama_depan, nama_belakang){
+            document.writeln(`${nama_depan} ${nama_belakang}`)
+        }
+
+        names("Iqbal")
+
+        space()
+        // menambahkan default value
+        function person(name, gender = "UNKNOWN"){
+            document.writeln(`${name}, ${gender}`)
+        }
+
+        person("Iqbal", "male")
+    </script>
+</body>
+</html>

@@ -8,17 +8,18 @@
 </head>
 <body>
     <script>
-        // input
-        const name = prompt("Siapa nama anda ?") 
-        alert(`Hallo ${name}`)
-        
-        // konfirmasi
-        const lanjut = confirm("Lanjutkan Program ?") 
-        if(confirm){
-            alert("Selamat Datang")
-        } else{
-            alert("Bye bye")
+        let nama = ""
+        function name(nama_depan, nama_belakang){
+            nama = nama_depan + nama_belakang
+
+            function cetak(){
+                document.writeln(nama)
+            }
         }
+
+        name("Muhammad", "Iqbal")
+
+
     </script>
 </body>
 </html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*'
+      Kemampuan sebuah function memanggil function nya sendiri
+
+      contoh kasus factorial
+      */
+
+      // Cara biasa
+      function factorial(value) {
+        let result = 1;
+        for (let index = 1; index < value; index++) {
+            result *= index
+        }
+
+        return result
+      }
+      
+      res = factorial(10)
+      document.writeln(res)
+
+      // dengan recursive
+      function factorialRecursive(value){
+        // hasil akhir
+        if (value === 1) {
+            return 1;
+        } else{
+            // sama dengan index-- 
+            return value * factorialRecursive(value - 1)
+        }
+      }
+      res = factorialRecursive(10)
+      /*
+      10 * factorialRecursive(9)
+      10 * 9 * factorialRecursive(8)
+      10 * 9 * 8 * factorialRecursive(7)
+      .
+      .
+      10 * 9 * 8 * ... *1 factorialRecursive(1)
+      */ 
+      document.writeln(res)
+    </script>
+  </body>
+</html>

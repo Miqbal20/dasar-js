@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // void function
+        function sayHelloWorld(){
+            document.writeln(`<p>Hello World</p>`)
+        }
+
+        sayHelloWorld()
+
+        // Paramter
+        function sayHello(name){            
+            document.writeln(`Hello ${name}`)
+        }
+
+        sayHello("Iqbal")
+
+        // Parameter + return
+        function names(nama_depan, nama_belakang){
+            const nama = `${nama_depan} ${nama_belakang}`
+
+            return nama
+        }
+
+        hasil = names("Muhammad", "Iqbal")
+        document.writeln(`<p>${hasil}</p>`)
+
+        // Filtering
+        function isContain(array, searchValue){            
+            for (const iterator of array) {
+                if (iterator === searchValue) {
+                    
+                    return true
+                }
+            }
+
+        }
+
+        array = [1,2,3,4,5,6,7,8,9,0]
+        search = 5
+        hasil = isContain(array, search)
+
+        document.writeln(hasil)
+    </script>
+</body>
+</html>
