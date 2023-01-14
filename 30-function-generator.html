@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+        Function yang digunakan untuk membuat dat generator
+
+        generator : data yang bisa di iterasi seperti array
+
+        diawali dengan tanda bintang *
+
+        untuk me return menggunakan yield
+        */
+
+      function* createNames(...value) {
+        yield "Muhammad";
+        yield "Iqbal";
+      }
+
+      const names = createNames();
+      for (const iterator of names) {
+        document.writeln(iterator);
+      }
+
+      // contoh 2
+      function* createGanjil(value) {
+        for (let i = 0; i < value; i++) {
+          if (i % 2 === 1) {
+            yield i;
+          }
+        }
+      }
+
+      const numbers = createGanjil(10);
+      for (const iterator of numbers) {
+        document.writeln(iterator);
+      }
+
+      // Contoh 3
+      
+      /*
+        Lazy Evaluation : tarik data terlebih dahulu baru dieksekusi
+        */
+
+      function* createPerson(...value) {
+        for (const iterator of value) {
+          yield iterator;
+        }
+      }
+
+      const person = createPerson("Muhammad", "Iqbal");
+      for (const iterator of person) {
+        console.info(iterator)
+      }
+
+      // eager 
+      function createGenap(value){
+        let result = []
+        for (let i = 1; i < value; i++) {
+            if (i % 2 === 0) {
+                console.info(`Yield ke ${i}`)
+                result.push(i)
+            }   
+        }
+        return result
+      }
+
+      hasil = createGenap(10)
+    //   console.info(hasil)
+    
+
+    </script>
+  </body>
+</html>
